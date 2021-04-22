@@ -2,6 +2,7 @@
 require 'json'
 require 'pry'
 require 'date'
+require 'set'
 
 class User
   attr_reader :attributes, :sessions
@@ -46,6 +47,7 @@ def work(filename = 'data.txt', disable_gc: true)
 
   users = []
   sessions = {}
+  uniqueBrowsers = Set[]
 
   file_lines.each do |line|
     cols = line.split(',')
@@ -57,6 +59,7 @@ def work(filename = 'data.txt', disable_gc: true)
         sessions[cols[1]] = []
         sessions[cols[1]] << parse_session(cols)
       end
+      uniqueBrowsers.add(cols[3])
     end
   end
 
@@ -79,24 +82,15 @@ def work(filename = 'data.txt', disable_gc: true)
 
   report[:totalUsers] = users.count
 
-  # Подсчёт количества уникальных браузеров
-  uniqueBrowsers = []
-  sessions.values.flatten.each do |session|
-    browser = session['browser']
-    uniqueBrowsers += [browser] if uniqueBrowsers.all? { |b| b != browser }
-  end
+  # Преобразование наименований и списка браузеров
+  browsersList = uniqueBrowsers.to_a.map{|b| b.upcase }.sort
 
-  report['uniqueBrowsersCount'] = uniqueBrowsers.count
+  # Подсчёт количества уникальных браузеров
+  report['uniqueBrowsersCount'] = browsersList.count
 
   report['totalSessions'] = sessions.values.flatten.count
 
-  report['allBrowsers'] =
-    sessions.values.flatten
-      .map { |s| s['browser'] }
-      .map { |b| b.upcase }
-      .sort
-      .uniq
-      .join(',')
+  report['allBrowsers'] = browsersList.join(',')
 
   # Статистика по пользователям
   users_objects = []
