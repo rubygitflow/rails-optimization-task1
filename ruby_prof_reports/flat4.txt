@@ -1,0 +1,77 @@
+Measure Mode: wall_time
+Thread ID: 80
+Fiber ID: 60
+Total: 3.131985
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+ 19.86      1.169     0.622     0.000     0.548        1   IO#each                        
+ 14.97      0.925     0.469     0.000     0.456     4226   <Class::Date>#parse            
+ 11.70      1.352     0.366     0.000     0.985     3870   Array#map                      
+  7.39      1.944     0.232     0.000     1.713        2   Array#each                     
+  5.19      0.216     0.163     0.000     0.053     4226   Object#parse_session           /home/dekan/Work/Ruby/rails-optimization-examples/rails-optimization-task1/task-1.rb:16
+  4.69      0.147     0.147     0.000     0.000     4226   Set#add                        /home/dekan/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/set.rb:338
+  4.04      0.126     0.126     0.000     0.000     4226   String#gsub!                   
+  4.02      0.126     0.126     0.000     0.000     8452   Regexp#match                   
+  3.51      0.110     0.110     0.000     0.000     5000   String#split                   
+  3.29      0.184     0.103     0.000     0.082     1549   Array#sort                     
+  2.60      0.082     0.082     0.000     0.000     7306   Date#<=>                       
+  1.96      0.061     0.061     0.000     0.000     4226   MatchData#begin                
+  1.92      0.060     0.060     0.000     0.000     4226   Date#iso8601                   
+  1.70      0.053     0.053     0.000     0.000     4226   String#upcase!                 
+  1.70      0.053     0.053     0.000     0.000     4226   String#to_i                    
+  1.68      0.053     0.053     0.000     0.000     4226   String#[]=                     
+  1.49      0.047     0.047     0.000     0.000     4226   Integer#div                    
+  1.48      0.046     0.046     0.000     0.000      774   Array#any?                     
+  1.39      0.044     0.044     0.000     0.000     4226   MatchData#end                  
+  0.98      0.031     0.031     0.000     0.000      774   Array#all?                     
+  0.68      0.021     0.021     0.000     0.000      774   Object#parse_user              /home/dekan/Work/Ruby/rails-optimization-examples/rails-optimization-task1/task-1.rb:7
+  0.60      0.019     0.019     0.000     0.000     1548   String#+                       
+  0.56      0.018     0.018     0.000     0.000     1548   Integer#to_s                   
+  0.46      0.014     0.014     0.000     0.000      775   Array#join                     
+  0.45      0.014     0.014     0.000     0.000      774   Hash#merge                     
+  0.36      0.011     0.011     0.000     0.000        1   JSON::Ext::Generator::GeneratorMethods::Hash#to_json 
+  0.28      0.009     0.009     0.000     0.000      774   Array#max                      
+  0.28      0.009     0.009     0.000     0.000      774   Array#sum                      
+  0.28      0.009     0.009     0.000     0.000      777   Array#count                    
+  0.27      0.009     0.009     0.000     0.000      774   Array#reverse                  
+  0.11      0.003     0.003     0.000     0.000        1   Array#flatten                  
+  0.04      0.001     0.001     0.000     0.000        1   <Class::IO>#write              
+  0.03      3.132     0.001     0.000     3.131        1   Object#work                    /home/dekan/Work/Ruby/rails-optimization-examples/rails-optimization-task1/task-1.rb:26
+  0.01      3.132     0.000     0.000     3.132        1   [global]#                      task.rb:7
+  0.00      0.000     0.000     0.000     0.000        1   File#initialize                
+  0.00      0.000     0.000     0.000     0.000        1   Set#initialize                 /home/dekan/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/set.rb:93
+  0.00      0.000     0.000     0.000     0.000        1   Set#merge                      /home/dekan/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/set.rb:422
+  0.00      0.000     0.000     0.000     0.000        1   JSON::Ext::Generator::State#initialize 
+  0.00      0.000     0.000     0.000     0.000        1   Set#do_with_enum               /home/dekan/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/set.rb:122
+  0.00      0.000     0.000     0.000     0.000        2  *Class#new                      
+  0.00      0.000     0.000     0.000     0.000        4   <Object::Object>#[]            
+  0.00      0.000     0.000     0.000     0.000        1   <Module::GC>#disable           <internal:gc>:63
+  0.00      0.000     0.000     0.000     0.000        1   <Class::Set>#[]                /home/dekan/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/set.rb:78
+  0.00      0.000     0.000     0.000     0.000        1   Hash#values                    
+  0.00      0.000     0.000     0.000     0.000        1   <Class::IO>#open               
+  0.00      0.000     0.000     0.000     0.000        1   Set#to_a                       /home/dekan/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/set.rb:192
+  0.00      0.000     0.000     0.000     0.000        1   Enumerable#each_entry          
+  0.00      0.000     0.000     0.000     0.000        1   Hash#keys                      
+  0.00      0.000     0.000     0.000     0.000        1   Kernel#class                   
+  0.00      0.000     0.000     0.000     0.000        1   Kernel#respond_to?             
+  0.00      0.000     0.000     0.000     0.000        1   Kernel#instance_of?            
+  0.00      0.000     0.000     0.000     0.000        1   Hash#initialize                
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.

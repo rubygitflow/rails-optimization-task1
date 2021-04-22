@@ -4,7 +4,7 @@ require 'ruby-prof'
 RubyProf.measure_mode = RubyProf::WALL_TIME
 
 result = RubyProf.profile do
-  work(filename = 'data_1X.txt', disable_gc: true)
+  work(filename = 'data_5X.txt', disable_gc: false)
 end
 
 printer = RubyProf::FlatPrinter.new(result)
