@@ -11,7 +11,7 @@ end
 
 describe 'Performance' do
   describe 'linear work' do
-    let(:time) { 80 }
+    let(:time) { 40 }
     it 'works under 100 ms' do
       expect {
         worker
@@ -20,7 +20,7 @@ describe 'Performance' do
 
     let(:measurement_time_seconds) { 1 }
     let(:warmup_seconds) { 0.2 }
-    let(:ips) { 12 }
+    let(:ips) { 25 }
     it 'works faster than 10 ips' do
       expect {
         worker
